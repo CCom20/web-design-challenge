@@ -1,3 +1,16 @@
-.navbar-light {
-    background-color: #4682B4;
+/* Color Pallete */
+/*  Base: #35638A
+    Text: #3C4856
+    Yellow Accent: #E29E21
+    Blue-White Accent: #e7f2f8
+
+*/
+.navbar-dark{
+    background-color: #35638a;
+}
+
+.header {
+    padding: .5rem 1rem;
+    background-color: #e7f2f8;
+    color: #3C4856
 }
