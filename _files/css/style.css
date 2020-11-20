@@ -19,3 +19,7 @@
 .body-padded {
     margin: 0% 10% 0% 10%;
 }
+
+.para-padded {
+    padding: 20px 0px 20px 0px;
+}
