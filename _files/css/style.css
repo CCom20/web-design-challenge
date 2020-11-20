@@ -11,6 +11,11 @@
 
 .header {
     padding: .5rem 1rem;
+    margin-bottom: 15px;
     background-color: #e7f2f8;
     color: #3C4856
+}
+
+.body-padded {
+    margin: 0% 10% 0% 10%;
 }
