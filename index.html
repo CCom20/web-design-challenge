@@ -42,21 +42,25 @@
     <!--BODY-->
     <body>
       <!--PAGE HEADER-->
-    <div class="header">
-        <h1>Welcome to Weather Analysis 1.0</h1>
-    </div>
+      <div class="row no-gutters">
+        <div class="col header">
+          <h1 class="header">Welcome to Weather Analysis 1.0</h1>
+      </div>
+      </div>
       <div class="body-padded">
         <!--PAGE COPY / MAIN CONTENT BODY-->
          <div class="row">
           <div class="col">
-            <img src="_files\images\city-lat-vs-max-temp.png" style="width: 500px;">
+            <img src="_files\images\city-lat-vs-max-temp.png" style="width: 600px;">
           </div>
           <div class="col para-padded">
             <h3>Weather Analysis</h3>
-            <p>This project looks at</p>
+            <p>The Weather Analysis project looks at relationships between latitude and four other variables: cloudiness, wind speed, humidity, and max temperature. The question being answerd is: "Does the weather change as you get closer to the equator?" All measurements were taken on <strong>January 5, 2017</strong>, and the data was pulled from OpenWeather API.</p>
+            <p><strong>Bottom-Line</strong>: There's strong correlation between latitude and max temperature. Generally, as you move closer to the equator, temperatures rise.</p>
+            <p><strong>About the Project</strong>: After pulling the data from OpenWeather, we used Pandas and Matplotlib to clean and graph the data. You can view the <a href="data/index.html">final csv on the data page</a>.</p>
           </div>
         </div>
-        <div class="para-padded">
+        <div class="col para-padded">
           <h3>Available Analyses</h3>
         </div>
         <div class="card-deck mx-auto">
