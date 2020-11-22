@@ -1,79 +1,19 @@
-# web-design-challenge
+# Weather Analysis Dashboard
+Here you will find the dashboard for the weather analysis project, which provides the basic findings when comparing latitude to max temperature, humidity, cloudiness, and wind speed. 
 
-# Web Design Homework - Web Visualization Dashboard (Latitude)
+## About the Dashbaord
+The dahsboard was built using Bootstrap. A small amount of CSS was written to mainly provide some additional spacing and a color scheme. I was able to locate some code on stackoverflow to detect the mobile viewport and display appropriately. So the website is not just resposive when changing the size of the window, but if you use any of the browsers' inspect tools and change the viewport to mobile, the website renders appropriately. 
 
-## Background
+**Navigation**
+A simple navigation with a dropdown and is mobile friendly. It is nested in the `<head>` tag, since the body uses the `.container` functionality. The container adds padding left and right of the body, and I wanted the navigation to fully across the page rather than having padding to its left/right. There is dropdown (`plots`) that contains a link to each visualization. 
 
-Data is more powerful when we share it with others! Let's take what we've learned about HTML and CSS to create a dashboard showing off the analysis we've done.
+**Landing Page**
+The landing page provides a brief overview of the project, and four visualizations all with a brief description and linking to their corresponding page. For these, I used Bootstrap's `card` functionality, which provides a clean and distinguished layout. 
 
-![Images/landingResize.png](Images/landingResize.png)
+**Data Page**
+Data used for the project was read with Panda's CSV reader. The dataframe was then converted to HTML using the `to_html` function. This converted it into an HTML table, and I used some of Bootstrap's library to give it a cleaner look. 
 
-### Before You Begin
+**Other / Lessions Learned**
+The rest of the pages follow a simple layout, and all pages use the same navigation. I did creating my website with a slightly different architecture, using `_files` as the asset folder where the CSS and images and data could be referenced. This worked well on my local machine, but in deploying to GitHub pages the `_files` folder was not being read/found. At first I thought this was due to relative paths, but noticed that my other folders were being found (e.g., /visualizations/ for the plots, and /data and /comparisons). 
 
-1. Create a new repository for this project called `Web-Design-Challenge`. **Do not add this homework to an existing repository**.
-
-2. Clone the new repository to your computer.
-
-3. Inside your local git repository, add your **html** files, as well as your **assets**, **Resources** and **visualizations** folders. Your `index.html` should be the landing page that the user first sees.
-
-4. Push the above changes to GitHub or GitLab.
-
-5. Deploy to GitHub Pages. 
-
-## Latitude - Latitude Analysis Dashboard with Attitude
-
-For this homework we'll be creating a visualization dashboard website using visualizations we've created in a past assignment. Specifically, we'll be plotting [weather data](Resources/cities.csv).
-
-In building this dashboard, we'll create individual pages for each plot and a means by which we can navigate between them. These pages will contain the visualizations and their corresponding explanations. We'll also have a landing page, a page where we can see a comparison of all of the plots, and another page where we can view the data used to build them.
-
-### Website Requirements
-
-For reference, see the ["Screenshots" section](#screenshots) below.
-
-The website must consist of 7 pages total, including:
-
-* A [landing page](#landing-page) containing:
-  * An explanation of the project.
-  * Links to each visualizations page. There should be a sidebar containing preview images of each plot, and clicking an image should take the user to that visualization.
-* Four [visualization pages](#visualization-pages), each with:
-  * A descriptive title and heading tag.
-  * The plot/visualization itself for the selected comparison.
-  * A paragraph describing the plot and its significance.
-* A ["Comparisons" page](#comparisons-page) that:
-  * Contains all of the visualizations on the same page so we can easily visually compare them.
-  * Uses a Bootstrap grid for the visualizations.
-    * The grid must be two visualizations across on screens medium and larger, and 1 across on extra-small and small screens.
-* A ["Data" page](#data-page) that:
-  * Displays a responsive table containing the data used in the visualizations.
-    * The table must be a bootstrap table component. [Hint](https://getbootstrap.com/docs/4.3/content/tables/#responsive-tables)
-    * The data must come from exporting the `.csv` file as HTML, or converting it to HTML. Try using a tool you already know, pandas. Pandas has a nifty method approprately called `to_html` that allows you to generate a HTML table from a pandas dataframe. See the documentation [here](https://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.DataFrame.to_html.html)
-
-The website must, at the top of every page, have a navigation menu that:
-
-* Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
-* Contains a dropdown menu on the right of the navbar named "Plots" that provides a link to each individual visualization page.
-* Provides two more text links on the right: "Comparisons," which links to the comparisons page, and "Data," which links to the data page.
-* Is responsive (using media queries). The nav must have similar behavior as the screenshots ["Navigation Menu" section](#navigation-menu) (notice the background color change).
-
-Finally, the website must be deployed to GitHub pages.
-
-When finished, submit to BootcampSpot the links to 1) the deployed app and 2) the GitHub repository.
-
-Ensure your repository has regular commits (i.e. 20+ commits) and a thorough README.md file
-
-### Considerations
-
-* You may use the [weather data](Resources/cities.csv) or choose another dataset. Alternatively, you may use the included [cities dataset](Resources/cities.csv) and pull the images from the [assets folder](Resources/assets).
-* You must use Bootstrap. This includes using the Bootstrap `navbar` component for the header on every page, the bootstrap table component for the data page, and the Bootstrap grid for responsiveness on the comparison page.
-* You must deploy your website to GitHub pages, with the website working on a live, publicly accessible URL as a result.
-* Be sure to use a CSS media query for the navigation menu.
-* Be sure your website works at all window widths/sizes.
-* Feel free to take some liberty in the visual aspects, but keep the core functionality the same.
-
-### Bonuses
-
-* Use a different dataset! The requirements above still hold, but make it your own.
-* Use a Bootstrap theme to customize your website. You may use a tool like [Bootswatch](https://bootswatch.com/). Make it look snazzy, give it some attitude. If using this, be sure you also meet all of the requirements listed above.
-* Add extra visualizations! The more comparisons the better, right?
-* Use meaningful glyphicons next to links in the header.
-* Have visualization navigation on every visualizations page with an active state. See the screenshots below.
+After a few different path times, a random thought came to me that the `_` might be an issue, since in some programming languages it is an escape character or an ignored variable. I removed it, and all CSS and images loaded perfectly. It took me about 15 or so pushes to GitHub to find this solution. 
