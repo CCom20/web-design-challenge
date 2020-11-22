@@ -7,6 +7,8 @@ The dahsboard was built using Bootstrap. A small amount of CSS was written to ma
 **Navigation**
 A simple navigation with a dropdown and is mobile friendly. It is nested in the `<head>` tag, since the body uses the `.container` functionality. The container adds padding left and right of the body, and I wanted the navigation to fully across the page rather than having padding to its left/right. There is dropdown (`plots`) that contains a link to each visualization. 
 
+**Note** It does seem like sometimes you have to clear your cache for the dropdown to work. I updated it code and compared it to Bootstrap's documentation. This could be a server rendering issue, or it could be that I am missing something. However, it does work after waiting a minute and refreshing the page with `ctrl f5`. 
+
 **Landing Page**
 The landing page provides a brief overview of the project, and four visualizations all with a brief description and linking to their corresponding page. For these, I used Bootstrap's `card` functionality, which provides a clean and distinguished layout. 
 
